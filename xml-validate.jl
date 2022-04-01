@@ -22,7 +22,7 @@ function xsdvalidatexml()
     else
         println("File ", ARGS[1]. "does not validate.")
         # exit with error
-        exit(1)
+        # exit(1)
     end
 end
  
