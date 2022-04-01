@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    working_directory: /xml-validator   # Clone into a directory whose name matches your Package.
+    docker:
+      - image: julia:0.7                # image comes from Docker hub
+    steps:
+      - checkout
+      - run:
+          name: install the LightXML package
+          command: julia -e 'using Pkg; Pkg.add("LightXML");'
+      - run:
+          name: Run test 1 
+          command: julia xml-validator.jl ./test_data/shiporder.xml ./test_data/shiporder.xsd
+      - run:
+          name: Run test 
+          command: julia xml-validator.jl  ./test_data/configuration.xml ./test_data/configuration.xsd
+           
+ 
