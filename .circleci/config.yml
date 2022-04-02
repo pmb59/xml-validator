@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: /xml-validator   # Clone into a directory whose name matches your Package.
+    working_directory: /xml-validator
     docker:
-      - image: julia:0.7                # image comes from Docker hub
+      - image: julia:0.7
     steps:
       - checkout
       - run:
