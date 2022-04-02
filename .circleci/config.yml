@@ -10,6 +10,9 @@ jobs:
           name: install the LightXML package
           command: julia -e 'using Pkg; Pkg.add("LightXML");'
       - run:
+          name: Test files in dir
+          command: julia tests.jl 
+      - run:
           name: Run test 1 
           command: julia xml-validate.jl ./test_data/shiporder.xml ./test_data/shiporder.xsd
       - run:
