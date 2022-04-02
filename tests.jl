@@ -9,7 +9,7 @@ if haskey(ENV, "RUNSCRIPT")
     if isfile("./test_data/" * f * ".xml") == false || isfile("./test_data/" * f * ".xsd") == false
       exit(1)
     else
-      print( "files for test " * f * " ready" )
+      print( "files for test " * f * " ready\n" )
     end
   end
   
