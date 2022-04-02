@@ -16,7 +16,7 @@ end
  
 function xsdvalidatexml()
     if length(ARGS) != 2
-        println("	Usage: julia xml-validate.jl xmlfilename xsdfilename ")
+        println("Usage: julia xml-validate.jl xmlfilename xsdfilename")
     elseif validate(ARGS[1], ARGS[2])
         println("File ", ARGS[1], " validates as correct XML using the XSD file ", ARGS[2], ".")
     else
