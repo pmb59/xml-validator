@@ -6,10 +6,12 @@
             <assay_group id="g1" label="mutant">
                 <assay>SRR000001</assay>
                 <assay>SRR000002</assay>
-            </assay_group>
-            <assay_group id="g2" label="willdtype">
                 <assay>SRR000003</assay>
+            </assay_group>
+            <assay_group id="g2" label="wildtype">
                 <assay>SRR000004</assay>
+                <assay>SRR000005</assay>
+                <assay>SRR000006</assay>
             </assay_group>
         </assay_groups>
     </analytics>
