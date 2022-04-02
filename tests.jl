@@ -3,11 +3,11 @@ ENV["RUNSCRIPT"] = true
   
 if haskey(ENV, "RUNSCRIPT")
   
-  files = readdir(abspath("test_data"), join=true)
+  files = readdir(dir="./test_data", join=true)
   
-  for i = files
-    print(i)
-    if isfile(i) == false
+  for file = files
+    print(file)
+    if isfile(file) == false
       exit(1)
     end
   end
