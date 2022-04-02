@@ -18,7 +18,3 @@ jobs:
       - run:
           name: Run test 2
           command: julia xml-validate.jl  ./test_data/configuration.xml ./test_data/configuration.xsd
-      - run:
-          name: Run test 3
-          command: julia xml-validate.jl  ./test_data/configuration.xml ./test_data/shiporder.xsd     
- 
