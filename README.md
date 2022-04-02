@@ -2,7 +2,6 @@
 
 XML format validator in Julia Lang
 
-Usage:
 ```
 julia xml-validate.jl [XML_FILE] [XSD_FILE]
 ```
