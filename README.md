@@ -8,4 +8,4 @@ julia xml-validate.jl [XML_FILE] [XSD_FILE]
 
 Requirements: _LightXML_
 
-Reference: [Rosetta Code](https://rosettacode.org/wiki/XML_validation)
+Reference: Rosetta Code
