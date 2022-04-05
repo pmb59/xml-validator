@@ -1,3 +1,5 @@
+#!/usr/bin/env julia
+
 using LightXML
  
 const Xptr = LightXML.Xptr
