@@ -13,8 +13,14 @@ jobs:
           name: Test files in dir
           command: julia tests.jl 
       - run:
+          name: Setup test dir
+          command: echo 'export TEST_DIR="./test_data"' 
+      - run:
           name: Run test 1
-          command: julia xml-validate.jl ./test_data/shiporder.xml ./test_data/shiporder.xsd
+          command: julia xml-validate.jl ${TEST_DIR}/shiporder.xml ${TEST_DIR}/shiporder.xsd
       - run:
           name: Run test 2
-          command: julia xml-validate.jl  ./test_data/configuration.xml ./test_data/configuration.xsd
+          command: julia xml-validate.jl  ${TEST_DIR}/configuration.xml ${TEST_DIR}/configuration.xsd
+      - run:
+          name: Run test 3
+          command: julia xml-validate.jl  ${TEST_DIR}/configuration_nonvalid.xml ${TEST_DIR}/configuration.xsd
