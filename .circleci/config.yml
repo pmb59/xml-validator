@@ -22,5 +22,8 @@ jobs:
           name: Run test 2, ok
           command: julia xml-validate.jl  ${TEST_DIR}/configuration.xml ${TEST_DIR}/configuration.xsd
       - run:
-          name: Run test 3, fail
+          name: Run test 3, fail (error)
           command: julia xml-validate.jl  ${TEST_DIR}/configuration_nonvalid.xml ${TEST_DIR}/configuration.xsd || true
+      - run:
+          name: Run test 4, fail (nonvalidate)
+          command: julia xml-validate.jl ${TEST_DIR}/shiporder_nonvalid.xml ${TEST_DIR}/shiporder.xsd
